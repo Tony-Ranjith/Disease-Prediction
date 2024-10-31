@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <div class="result-frame">
+        <h2>Predicted Disease: {{ predicted_disease }}</h2>
+        
+        <h3>Precautions:</h3>
+        <ul>
+            {% for precaution in precautions %}
+                <li>{{ precaution }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <a href="/" class="back-link">Go Back</a>
+</body>
+</html>
+
+
+
+
+
